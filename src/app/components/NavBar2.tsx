@@ -4,10 +4,15 @@ export default function NavBar2() {
     const [isPackageOpen, setIsPackageOpen] = useState(false);
     const [isSignalOpen, setIsSignalOpen] = useState(false);
 
-    const handleMenuClick = () => {
-        // Close Signal and My Package when clicking on other menu items
+    // Closes both Signal and My Package
+    const closeSignalAndMyPackage = () => {
         setIsSignalOpen(false);
         setIsPackageOpen(false);
+    };
+
+    // Only closes Signal
+    const closeSignal = () => {
+        setIsSignalOpen(false);
     };
 
     return (
@@ -15,7 +20,7 @@ export default function NavBar2() {
             <nav className="bg-gray-100 shadow p-1 flex justify-start space-x-1">
                 <a href="#"
                    className="text-gray-700 hover:text-gray-900 w-[112px] h-[28px] flex items-center justify-center hover:bg-gray-200 ml-[40px]"
-                   onClick={handleMenuClick} // Close Signal and My Package on My Profile click
+                   onClick={closeSignalAndMyPackage} // Close Signal and My Package on My Profile click
                 >
                     My Profile
                 </a>
@@ -27,7 +32,7 @@ export default function NavBar2() {
                    }`}
                    onClick={() => {
                        setIsPackageOpen(!isPackageOpen);
-                       setIsSignalOpen(false); // Close Signal if My Package is toggled
+                       closeSignal(); // Close Signal if My Package is toggled
                    }}
                 >
                     My Package
@@ -35,21 +40,21 @@ export default function NavBar2() {
 
                 <a href="#"
                    className="text-gray-700 hover:text-gray-900 w-[112px] h-[28px] flex items-center justify-center hover:bg-gray-200"
-                   onClick={handleMenuClick} // Close Signal and My Package on My Wallet click
+                   onClick={closeSignalAndMyPackage} // Close Signal and My Package on My Wallet click
                 >
                     My Wallet
                 </a>
 
                 <a href="#"
                    className="text-gray-700 hover:text-gray-900 w-[112px] h-[28px] flex items-center justify-center hover:bg-gray-200"
-                   onClick={handleMenuClick} // Close Signal and My Package on Notification click
+                   onClick={closeSignalAndMyPackage} // Close Signal and My Package on Notification click
                 >
                     Notification
                 </a>
 
                 <a href="#"
                    className="text-gray-700 hover:text-gray-900 w-[112px] h-[28px] flex items-center justify-center hover:bg-gray-200"
-                   onClick={handleMenuClick} // Close Signal and My Package on Affiliate click
+                   onClick={closeSignalAndMyPackage} // Close Signal and My Package on Affiliate click
                 >
                     Affiliate
                 </a>
@@ -60,21 +65,21 @@ export default function NavBar2() {
                 <div className="bg-gray-100 shadow p-3 flex justify-start space-x-2 ml-[0px] mt-1">
                     <a href="#"
                        className="text-gray-700 hover:text-gray-900 w-[150px] h-[28px] flex items-center justify-center hover:bg-gray-200"
-                       onClick={handleMenuClick} // Close Signal and My Package on Group Trading click
+                       onClick={closeSignal} // Close only Signal on Group Trading click
                     >
                         Group Trading
                     </a>
 
                     <a href="#"
                        className="text-gray-700 hover:text-gray-900 w-[150px] h-[28px] flex items-center justify-center hover:bg-gray-200"
-                       onClick={handleMenuClick} // Close Signal and My Package on Live Trading click
+                       onClick={closeSignal} // Close only Signal on Live Trading click
                     >
                         Live Trading
                     </a>
 
                     <a href="#"
                        className="text-gray-700 hover:text-gray-900 w-[150px] h-[28px] flex items-center justify-center hover:bg-gray-200"
-                       onClick={handleMenuClick} // Close Signal and My Package on Backtesting click
+                       onClick={closeSignal} // Close only Signal on Backtesting click
                     >
                         Backtesting
                     </a>
