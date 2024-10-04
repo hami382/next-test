@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        customGray: '#F4F4F5', // Define custom color
+        customGray: '#F4F4F5',
+        customPink: '#7C3AED',
       },
     },
   },
