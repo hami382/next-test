@@ -67,6 +67,51 @@ export default function SignalInfo() {
                     </div>
                 </div>
             )}
+
+            <div className="mt-10">
+                <h2 className="text-xl font-bold">Favorite Asset Name</h2>
+                <p className="mt-1 text-gray-600">Please enter your password to change your password</p>
+
+                <div className="flex space-x-4 mt-10 ml-[230px]">
+                    <button
+                        className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink">USDT
+                    </button>
+                    <button
+                        className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink">FDUSD
+                    </button>
+                    <button
+                        className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink">USDC
+                    </button>
+                    <button
+                        className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink">TUSD
+                    </button>
+                    <button
+                        className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink">BNB
+                    </button>
+                    <button
+                        className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink">BTC
+                    </button>
+                </div>
+
+                <div className="mt-4">
+                    <input
+                        type="text"
+                        placeholder="Search Assets..."
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                    />
+
+                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="flex items-center justify-between px-4 py-2 border border-gray-300 rounded-md">
+                            <span>Germany (+246)</span>
+                            <button className="text-customPink hover:text-pink-600">&gt;&gt;</button>
+                        </div>
+                        <div className="flex items-center justify-between px-4 py-2 border border-gray-300 rounded-md">
+                            <span>Brazil (+46)</span>
+                            <button className="text-customPink hover:text-pink-600">&gt;&gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
