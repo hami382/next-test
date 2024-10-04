@@ -13,7 +13,7 @@ export default function Dashboard() {
                 <Header/>
                 <ProfileBar/>
                 <div className="p-8">
-                    <h1 className="text-2xl font-bold">Main Content</h1>
+                    <h1 className="text-2xl font-bold"></h1>
                 </div>
             </div>
         </div>
