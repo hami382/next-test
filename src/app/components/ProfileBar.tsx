@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function NavBar2() {
+export default function ProfileBar() {
     const [isPackageOpen, setIsPackageOpen] = useState(false);
     const [isSignalOpen, setIsSignalOpen] = useState(false);
 

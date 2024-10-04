@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {FaSearch, FaBell, FaUserCircle} from 'react-icons/fa';
 
-export default function NavBar1() {
+export default function Header() {
     // State to control the visibility of the search bar
     const [showSearch, setShowSearch] = useState(false);
 
