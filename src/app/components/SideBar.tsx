@@ -6,6 +6,9 @@ import {RiBroadcastLine} from 'react-icons/ri';
 export default function SideBar() {
     const [isOpen, setIsOpen] = useState(true);
     const [isLibraryOpen, setIsLibraryOpen] = useState(false);
+    const [isBacktestOpen, setIsBacktestOpen] = useState(false);
+    const [isLiveOpen, setIsLiveOpen] = useState(false);
+    const [isSignalOpen, setIsSignalOpen] = useState(false);
 
     return (
         <div
@@ -37,7 +40,7 @@ export default function SideBar() {
                         className="text-black hover:bg-gray-200 p-2 rounded flex items-center"
                         onClick={() => setIsLibraryOpen(!isLibraryOpen)} // Toggle submenu
                     >
-                        <FaFolder className="mr-2" /> {/* Add icon here */}
+                        <FaFolder className="mr-2"/> {/* Add icon here */}
                         My Library
                     </a>
 
@@ -56,22 +59,69 @@ export default function SideBar() {
                     </div>
 
                     {/* Backtest */}
-                    <a href="#" className="text-black hover:bg-gray-200 p-2 rounded flex items-center">
+                    <a
+                        href="#"
+                        className="text-black hover:bg-gray-200 p-2 rounded flex items-center"
+                        onClick={() => setIsBacktestOpen(!isBacktestOpen)} // Toggle submenu
+                    >
                         <FaChartLine className="mr-2"/> {/* Add icon here */}
                         Backtest
                     </a>
 
+                    {/* Submenu with sliding animation */}
+                    <div
+                        className={`ml-6 mt-2 flex flex-col space-y-2 overflow-hidden duration-1000`}
+                        style={{
+                            maxHeight: isBacktestOpen ? "500px" : "0",
+                        }}
+                    >
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Bots</a>
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Results</a>
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">History</a>
+                    </div>
+
                     {/* Live */}
-                    <a href="#" className="text-black hover:bg-gray-200 p-2 rounded flex items-center">
+                    <a
+                        href="#"
+                        className="text-black hover:bg-gray-200 p-2 rounded flex items-center"
+                        onClick={() => setIsLiveOpen(!isLiveOpen)} // Toggle submenu
+                    >
                         <RiBroadcastLine className="mr-2"/> {/* Add icon here */}
                         Live
                     </a>
 
+                    {/* Submenu with sliding animation */}
+                    <div
+                        className={`ml-6 mt-2 flex flex-col space-y-2 overflow-hidden duration-1000`}
+                        style={{
+                            maxHeight: isLiveOpen ? "500px" : "0",
+                        }}
+                    >
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Trade Bots</a>
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Open Orders</a>
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Trade History</a>
+                    </div>
+
                     {/* Signal */}
-                    <a href="#" className="text-black hover:bg-gray-200 p-2 rounded flex items-center">
+                    <a
+                        href="#"
+                        className="text-black hover:bg-gray-200 p-2 rounded flex items-center"
+                        onClick={() => setIsSignalOpen(!isSignalOpen)} // Toggle submenu
+                    >
                         <FaSignal className="mr-2"/> {/* Add icon here */}
                         Signal
                     </a>
+
+                    {/* Submenu with sliding animation */}
+                    <div
+                        className={`ml-6 mt-2 flex flex-col space-y-2 overflow-hidden duration-1000`}
+                        style={{
+                            maxHeight: isSignalOpen ? "500px" : "0",
+                        }}
+                    >
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Trade List</a>
+                        <a href="#" className="text-black hover:bg-gray-200 p-2 rounded">Total Summery</a>
+                    </div>
                 </div>
             )}
         </div>
