@@ -27,7 +27,6 @@ export default function FavoriteAssetName() {
 
     const assetTypes = ["USDT", "FDUSD", "USDC", "TUSD", "BNB", "BTC"];
 
-    // Function to handle adding selected assets
     const addSelectedAssets = () => {
         const newSelected = availableAssets.filter(asset => asset.selected);
         setSelectedAssets([...selectedAssets, ...newSelected]);
@@ -36,7 +35,6 @@ export default function FavoriteAssetName() {
         );
     };
 
-    // Function to handle selecting/unselecting assets
     const toggleSelectAsset = index => {
         const updatedAssets = [...availableAssets];
         updatedAssets[index].selected = !updatedAssets[index].selected;
@@ -46,9 +44,8 @@ export default function FavoriteAssetName() {
     return (
         <div>
             <h2 className="text-xl font-bold">Favorite Asset Name</h2>
-            <p className="mt-1 text-gray-600">Please enter your password to change your password</p>
+            <p className="mt-1 text-gray-600">Please enter your current password to change your password</p>
 
-            {/* Asset type buttons */}
             <div className="flex space-x-4 mt-4">
                 {assetTypes.map((type, index) => (
                     <button
@@ -60,7 +57,6 @@ export default function FavoriteAssetName() {
                 ))}
             </div>
 
-            {/* Search bar */}
             <div className="mt-4">
                 <input
                     type="text"
@@ -69,9 +65,7 @@ export default function FavoriteAssetName() {
                 />
             </div>
 
-            {/* Asset selection section */}
             <div className="mt-4 flex justify-between">
-                {/* Available assets list */}
                 <div className="w-1/2 border p-4 rounded-md">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {availableAssets.map((asset, index) => (
@@ -91,7 +85,6 @@ export default function FavoriteAssetName() {
                     </div>
                 </div>
 
-                {/* Middle section for action buttons */}
                 <div className="flex flex-col justify-center mx-4">
                     <button
                         onClick={addSelectedAssets}
@@ -101,7 +94,6 @@ export default function FavoriteAssetName() {
                     </button>
                 </div>
 
-                {/* Selected assets list */}
                 <div className="w-1/2 border p-4 rounded-md">
                     <div className="grid grid-cols-1 gap-4">
                         {selectedAssets.map((asset, index) => (
