@@ -1,4 +1,6 @@
 import {useState} from "react";
+import FavoriteAssetName from './FavoriteAssetName';
+import FavoriteTimeFrame from "./FavoriteTimeFrame";
 
 export default function SignalInfo() {
     const [isSettingOpen, setIsSettingOpen] = useState(false);
@@ -64,6 +66,12 @@ export default function SignalInfo() {
                                 <option>Select</option>
                             </select>
                         </div>
+                    </div>
+                    <div className="mt-10">
+                        <FavoriteAssetName/>
+                    </div>
+                    <div className="mt-10">
+                        <FavoriteTimeFrame/>
                     </div>
                 </div>
             )}
