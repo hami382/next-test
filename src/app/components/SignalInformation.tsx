@@ -1,6 +1,7 @@
 import {useState} from "react";
 import FavoriteAssetName from './FavoriteAssetName';
 import FavoriteTimeFrame from "./FavoriteTimeFrame";
+import MoneyManagement from './MoneyManagement';
 
 export default function SignalInfo() {
     const [isSettingOpen, setIsSettingOpen] = useState(false);
@@ -72,6 +73,9 @@ export default function SignalInfo() {
                     </div>
                     <div className="mt-10">
                         <FavoriteTimeFrame/>
+                    </div>
+                    <div className="mt-10">
+                        <MoneyManagement/>
                     </div>
                 </div>
             )}
