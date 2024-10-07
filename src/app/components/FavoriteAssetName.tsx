@@ -3,26 +3,26 @@ import {useState} from "react";
 export default function FavoriteAssetName() {
     const [selectedAssets, setSelectedAssets] = useState([]);
     const [availableAssets, setAvailableAssets] = useState([
-        {name: "Germany (+246)", selected: false},
-        {name: "Germany (+246)", selected: false},
-        {name: "Brazil (+46)", selected: false},
-        {name: "Brazil (+46)", selected: false},
-        {name: "Australia (+76)", selected: false},
-        {name: "Australia (+76)", selected: false},
-        {name: "Canada (+918)", selected: false},
-        {name: "Canada (+918)", selected: false},
-        {name: "Germany (+246)", selected: false},
-        {name: "Germany (+246)", selected: false},
-        {name: "Brazil (+46)", selected: false},
-        {name: "Brazil (+46)", selected: false},
-        {name: "Australia (+76)", selected: false},
-        {name: "Australia (+76)", selected: false},
-        {name: "Canada (+918)", selected: false},
-        {name: "Canada (+918)", selected: false},
-        {name: "Germany (+246)", selected: false},
-        {name: "Germany (+246)", selected: false},
-        {name: "Brazil (+46)", selected: false},
-        {name: "Brazil (+46)", selected: false},
+        {name: "Germany (+246)", selected: false, index: 0},
+        {name: "Germany (+246)", selected: false, index: 1},
+        {name: "Brazil (+46)", selected: false, index: 2},
+        {name: "Brazil (+46)", selected: false, index: 3},
+        {name: "Australia (+76)", selected: false, index: 4},
+        {name: "Australia (+76)", selected: false, index: 5},
+        {name: "Canada (+918)", selected: false, index: 6},
+        {name: "Canada (+918)", selected: false, index: 7},
+        {name: "Germany (+246)", selected: false, index: 8},
+        {name: "Germany (+246)", selected: false, index: 9},
+        {name: "Brazil (+46)", selected: false, index: 10},
+        {name: "Brazil (+46)", selected: false, index: 11},
+        {name: "Australia (+76)", selected: false, index: 12},
+        {name: "Australia (+76)", selected: false, index: 13},
+        {name: "Canada (+918)", selected: false, index: 14},
+        {name: "Canada (+918)", selected: false, index: 15},
+        {name: "Germany (+246)", selected: false, index: 16},
+        {name: "Germany (+246)", selected: false, index: 17},
+        {name: "Brazil (+46)", selected: false, index: 18},
+        {name: "Brazil (+46)", selected: false, index: 19},
     ]);
 
     const assetTypes = ["USDT", "FDUSD", "USDC", "TUSD", "BNB", "BTC"];
@@ -45,7 +45,10 @@ export default function FavoriteAssetName() {
         const toReturn = selectedAssets.filter(asset => asset.selected);
         const remainingInRightPanel = selectedAssets.filter(asset => !asset.selected);
 
-        setAvailableAssets([...availableAssets, ...toReturn.map(asset => ({...asset, selected: false}))]);
+        setAvailableAssets(
+            [...availableAssets, ...toReturn.map(asset => ({...asset, selected: false}))]
+                .sort((a, b) => a.index - b.index)
+        );
         setSelectedAssets(remainingInRightPanel);
     };
 
