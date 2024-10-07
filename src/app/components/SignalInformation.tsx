@@ -14,15 +14,15 @@ export default function SignalInfo() {
 
             <div className="mt-10">
                 <div className="flex space-x-4 mt-2">
-                    <a href="#" className="text-gray-700 hover:text-customPink">Service</a>
+                    <a href="#" className="text-gray-700 hover:text-customPurple">Service</a>
                     <a
                         href="#"
-                        className="text-gray-700 hover:text-customPink"
+                        className="text-gray-700 hover:text-customPurple"
                         onClick={() => setIsSettingOpen(!isSettingOpen)}
                     >
                         Setting
                     </a>
-                    <a href="#" className="text-gray-700 hover:text-customPink">Turnover</a>
+                    <a href="#" className="text-gray-700 hover:text-customPurple">Turnover</a>
                 </div>
             </div>
 

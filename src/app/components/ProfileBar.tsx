@@ -26,7 +26,7 @@ export default function ProfileBar() {
 
                 <a href="#"
                    className={`w-[112px] h-[28px] flex items-center justify-center hover:bg-gray-200 ${
-                       isPackageOpen ? 'text-customPink bg-gray-200' : 'text-gray-700 hover:bg-gray-200'
+                       isPackageOpen ? 'text-customPurple bg-gray-200' : 'text-gray-700 hover:bg-gray-200'
                    }`}
                    onClick={() => {
                        setIsPackageOpen(!isPackageOpen);
@@ -83,7 +83,7 @@ export default function ProfileBar() {
 
                     <a href="#"
                        className={`w-[150px] h-[28px] flex items-center justify-center hover:bg-gray-200 ${
-                           isSignalOpen ? 'text-customPink bg-gray-200' : 'text-gray-700 hover:bg-gray-200'
+                           isSignalOpen ? 'text-customPurple bg-gray-200' : 'text-gray-700 hover:bg-gray-200'
                        }`}
                        onClick={() => setIsSignalOpen(!isSignalOpen)}
                     >

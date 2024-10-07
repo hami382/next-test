@@ -10,7 +10,7 @@ const PartnerWithUs = () => {
                 <div>
                     <label className="block text-sm font-bold text-gray-700">Package Name</label>
                     <select
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPink focus:border-customPink sm:text-sm"
+                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPurple focus:border-customPurple sm:text-sm"
                     >
                         <option>Select</option>
                     </select>
@@ -19,7 +19,7 @@ const PartnerWithUs = () => {
                 <div>
                     <label className="block text-sm font-bold text-gray-700">Duration</label>
                     <select
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPink focus:border-customPink sm:text-sm"
+                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPurple focus:border-customPurple sm:text-sm"
                     >
                         <option>Select</option>
                     </select>
@@ -28,7 +28,7 @@ const PartnerWithUs = () => {
                 <div>
                     <label className="block text-sm font-bold text-gray-700">Exchange</label>
                     <select
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPink focus:border-customPink sm:text-sm"
+                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPurple focus:border-customPurple sm:text-sm"
                     >
                         <option>Select</option>
                     </select>
@@ -37,7 +37,7 @@ const PartnerWithUs = () => {
                 <div>
                     <label className="block text-sm font-bold text-gray-700">Trade Market</label>
                     <select
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPink focus:border-customPink sm:text-sm"
+                        className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customPurple focus:border-customPurple sm:text-sm"
                     >
                         <option>Select</option>
                     </select>

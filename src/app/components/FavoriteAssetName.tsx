@@ -29,10 +29,24 @@ export default function FavoriteAssetName() {
 
     const addSelectedAssets = () => {
         const newSelected = availableAssets.filter(asset => asset.selected);
-        setSelectedAssets([...selectedAssets, ...newSelected]);
-        setAvailableAssets(
-            availableAssets.map(asset => ({...asset, selected: false}))
-        );
+        const newAvailableAssets = availableAssets.filter(asset => !asset.selected);
+
+        setSelectedAssets([...selectedAssets, ...newSelected.map(asset => ({...asset, selected: false}))]);
+        setAvailableAssets(newAvailableAssets);
+    };
+
+    const toggleSelectInRightPanel = index => {
+        const updatedAssets = [...selectedAssets];
+        updatedAssets[index].selected = !updatedAssets[index].selected;
+        setSelectedAssets(updatedAssets);
+    };
+
+    const returnSelectedAssets = () => {
+        const toReturn = selectedAssets.filter(asset => asset.selected);
+        const remainingInRightPanel = selectedAssets.filter(asset => !asset.selected);
+
+        setAvailableAssets([...availableAssets, ...toReturn.map(asset => ({...asset, selected: false}))]);
+        setSelectedAssets(remainingInRightPanel);
     };
 
     const toggleSelectAsset = index => {
@@ -50,7 +64,7 @@ export default function FavoriteAssetName() {
                 {assetTypes.map((type, index) => (
                     <button
                         key={index}
-                        className="ml-[240px] px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPink"
+                        className="ml-[240px] px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-customPurple"
                     >
                         {type}
                     </button>
@@ -61,7 +75,7 @@ export default function FavoriteAssetName() {
                 <input
                     type="text"
                     placeholder="Search Assets..."
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                 />
             </div>
 
@@ -78,19 +92,25 @@ export default function FavoriteAssetName() {
                             >
                                 <span>{asset.name}</span>
                                 {asset.selected && (
-                                    <span className="text-customPink">✔</span>
+                                    <span className="text-customPurple">✔</span>
                                 )}
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center mx-4">
+                <div className="flex flex-col justify-center mx-4 space-y-2">
                     <button
                         onClick={addSelectedAssets}
-                        className="px-4 py-2 bg-customPink text-white rounded-md shadow"
+                        className="px-4 py-2 bg-red-500 text-white rounded-md shadow hover:bg-blue-500"
                     >
-                        &gt;&gt;
+                        ➡
+                    </button>
+                    <button
+                        onClick={returnSelectedAssets}
+                        className="px-4 py-2 bg-gray-500 text-white rounded-md shadow hover:bg-yellow-500"
+                    >
+                        ⬅
                     </button>
                 </div>
 
@@ -99,7 +119,10 @@ export default function FavoriteAssetName() {
                         {selectedAssets.map((asset, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-between px-4 py-2 border rounded-md"
+                                onClick={() => toggleSelectInRightPanel(index)}
+                                className={`flex items-center justify-between px-4 py-2 border rounded-md cursor-pointer ${
+                                    asset.selected ? "bg-purple-100" : ""
+                                }`}
                             >
                                 <span>{asset.name}</span>
                             </div>

@@ -18,7 +18,7 @@ export default function FavoriteTimeFrame() {
                     <select
                         value={selectedDay}
                         onChange={(e) => setSelectedDay(e.target.value)}
-                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                     >
                         {daysOfWeek.map((day, index) => (
                             <option key={index} value={day}>
@@ -33,7 +33,7 @@ export default function FavoriteTimeFrame() {
                         type="text"
                         value={startTime}
                         onChange={(e) => setStartTime(e.target.value)}
-                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                         placeholder="Start Time"
                     />
                 </div>
@@ -43,7 +43,7 @@ export default function FavoriteTimeFrame() {
                         type="text"
                         value={endTime}
                         onChange={(e) => setEndTime(e.target.value)}
-                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                         placeholder="End Time"
                     />
                 </div>

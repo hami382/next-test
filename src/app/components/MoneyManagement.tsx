@@ -17,7 +17,7 @@ export default function MoneyManagement() {
                         type="number"
                         value={risk}
                         onChange={(e) => setRisk(e.target.value)}
-                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                         placeholder="Your Number"
                     />
                 </div>
@@ -28,7 +28,7 @@ export default function MoneyManagement() {
                         type="number"
                         value={reward}
                         onChange={(e) => setReward(e.target.value)}
-                        className="ml-4 mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                        className="ml-4 mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                         placeholder="Your Number"
                     />
                 </div>
@@ -40,13 +40,13 @@ export default function MoneyManagement() {
                     type="number"
                     value={fund}
                     onChange={(e) => setFund(e.target.value)}
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPink"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-customPurple"
                     placeholder="Your Number"
                 />
             </div>
 
             <div className="mt-10 flex space-x-4">
-                <button className="px-4 py-2 bg-customPink text-white rounded-md shadow hover:bg-pink-600">
+                <button className="px-4 py-2 bg-customPurple text-white rounded-md shadow hover:bg-pink-600">
                     Pay Now
                 </button>
                 <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md shadow hover:bg-gray-300">
