@@ -17,7 +17,9 @@ export default function SignalInfo() {
                     <a href="#" className="text-gray-700 hover:text-customPurple hover:bg-gray-200">Service</a>
                     <a
                         href="#"
-                        className="text-gray-700 hover:text-customPurple hover:bg-gray-200"
+                        className={`hover:bg-gray-200 ${
+                            isSettingOpen ? 'text-customPurple bg-gray-200' : 'text-gray-700 hover:bg-gray-200'
+                        }`}
                         onClick={() => setIsSettingOpen(!isSettingOpen)}
                     >
                         Setting
