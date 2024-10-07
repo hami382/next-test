@@ -125,6 +125,9 @@ export default function FavoriteAssetName() {
                                 }`}
                             >
                                 <span>{asset.name}</span>
+                                {asset.selected && (
+                                    <span className="text-customPurple">✔</span>
+                                )}
                             </div>
                         ))}
                     </div>
